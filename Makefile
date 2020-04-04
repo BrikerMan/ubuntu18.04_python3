@@ -1,41 +1,66 @@
 default: py_3.7.5
 
-all: py_3.7.5 py_3.6.8 py_3.8.0
+all: py_3.6.10 py_3.6.10_cn \
+     py_3.7.5 py_3.7.5_cn py_3.7.8 py_3.7.8_cn \
+	 py_3.8.2 py_3.8.2_cn \
+	 py_3.9.0 py_3.9.0_cn
+
+py_3.6.10:
+	docker build -f Dockerfile --build-arg PYTHON_VERSION=3.6.10 \
+		-t brikerman/ubuntu18.04_python3:3.6.10 \
+		-t brikerman/ubuntu18.04_python3:3.6 \
+		--compress .
+
+py_3.6.10_cn:
+	docker build -f CN.Dockerfile --build-arg PYTHON_VERSION=3.6.10 \
+		-t brikerman/ubuntu18.04_python3:3.6.10-cn \
+		-t brikerman/ubuntu18.04_python3:3.6-cn \
+		--compress .
 
 py_3.7.5:
 	docker build -f Dockerfile --build-arg PYTHON_VERSION=3.7.5 \
 		-t brikerman/ubuntu18.04_python3:3.7.5 \
-		-t brikerman/ubuntu18.04_python3:3.7 \
 		--compress .
 
 py_3.7.5_cn:
 	docker build -f CN.Dockerfile --build-arg PYTHON_VERSION=3.7.5 \
 		-t brikerman/ubuntu18.04_python3:3.7.5-cn \
+		--compress .
+
+py_3.7.7:
+	docker build -f Dockerfile --build-arg PYTHON_VERSION=3.7.7 \
+		-t brikerman/ubuntu18.04_python3:3.7.7 \
+		-t brikerman/ubuntu18.04_python3:3.7 \
+		--compress .
+
+py_3.7.7_cn:
+	docker build -f CN.Dockerfile --build-arg PYTHON_VERSION=3.7.7 \
+		-t brikerman/ubuntu18.04_python3:3.7.7-cn \
 		-t brikerman/ubuntu18.04_python3:3.7-cn \
 		--compress .
 
-py_3.6.8:
-	docker build -f Dockerfile --build-arg PYTHON_VERSION=3.6.8 \
-		-t brikerman/ubuntu18.04_python3:3.6.8 \
-		-t brikerman/ubuntu18.04_python3:3.6 \
-		--compress .
-
-py_3.6.8_cn:
-	docker build -f Dockerfile --build-arg PYTHON_VERSION=3.6.8 \
-		-t brikerman/ubuntu18.04_python3:3.6.8-cn \
-		-t brikerman/ubuntu18.04_python3:3.6-cn \
-		--compress .
-
-py_3.8.0:
-	docker build -f Dockerfile --build-arg PYTHON_VERSION=3.8.0 \
-		-t brikerman/ubuntu18.04_python3:3.8.0 \
+py_3.8.2:
+	docker build -f Dockerfile --build-arg PYTHON_VERSION=3.8.2 \
+		-t brikerman/ubuntu18.04_python3:3.8.2 \
 		-t brikerman/ubuntu18.04_python3:3.8 \
+		--compress .
+
+py_3.8.2_cn:
+	docker build -f Dockerfile --build-arg PYTHON_VERSION=3.8.2 \
+		-t brikerman/ubuntu18.04_python3:3.8.2-cn \
+		-t brikerman/ubuntu18.04_python3:3.8-cn \
+		--compress .
+
+py_3.9.0:
+	docker build -f Dockerfile --build-arg PYTHON_VERSION=3.9.0 \
+		-t brikerman/ubuntu18.04_python3:3.9.0 \
+		-t brikerman/ubuntu18.04_python3:3.9 \
 		-t brikerman/ubuntu18.04_python3:latest \
 		--compress .
 
-py_3.8.0_cn:
-	docker build -f Dockerfile --build-arg PYTHON_VERSION=3.8.0 \
-		-t brikerman/ubuntu18.04_python3:3.8.0-cn \
-		-t brikerman/ubuntu18.04_python3:3.8-cn \
+py_3.9.0_cn:
+	docker build -f Dockerfile --build-arg PYTHON_VERSION=3.9.0 \
+		-t brikerman/ubuntu18.04_python3:3.9.0-cn \
+		-t brikerman/ubuntu18.04_python3:3.9-cn \
 		-t brikerman/ubuntu18.04_python3:latest-cn \
 		--compress .
