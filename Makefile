@@ -1,7 +1,7 @@
 default: py_3.7.5
 
 all: py_3.6.10 py_3.6.10_cn \
-  py_3.7.5 py_3.7.5_cn py_3.7.8 py_3.7.8_cn \
+  py_3.7.5 py_3.7.5_cn py_3.7.7 py_3.7.7_cn \
   py_3.8.2 py_3.8.2_cn
 
 py_3.6.10:

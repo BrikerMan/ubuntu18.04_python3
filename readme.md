@@ -2,7 +2,23 @@
 
 Clean and small python 3 on ubuntu 18.04
 
+[Docker Hub](https://hub.docker.com/r/brikerman/ubuntu18.04_python3.6)
+
 * installed python 3.x environments
+
+## Available versions
+
+- 3.6 -> (3.6.10)
+- 3.6.10
+- 3.7 -> (3.7.8)
+- 3.7.5
+- 3.7.8
+- 3.8 -> (3.8.2)
+- 3.8.2
+
+```bash
+docker pull brikerman/ubuntu18.04_python3:3.7.5
+```
 
 ## CN version
 
@@ -11,7 +27,9 @@ Clean and small python 3 on ubuntu 18.04
 * changed timezone to `Asia/Shanghai`
 
 ```bash
-docker pull brikerman/ubuntu18.04_python3.6
+docker pull brikerman/ubuntu18.04_python3:3.7.5-cn
+```
+brikerman/ubuntu18.04_python3.6
 ```
 
-[Docker Hub](https://hub.docker.com/r/brikerman/ubuntu18.04_python3.6)
+
