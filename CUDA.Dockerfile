@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.2-base-ubuntu20.04
+FROM nvidia/cuda:10.1-runtime-ubuntu18.04
 
 MAINTAINER BrikerMan "<https://eliyar.biz>"
 
